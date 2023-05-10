@@ -69,3 +69,61 @@
 |  static  |    원래있어야 할 위치에 있는다(기본값)     |
 | relative | 원래있어야 할 위치를 기준으로 바꿀 수 있다 |
 | absolute |     조상 요소를 기준으로 바꿀 수 있다      |
+|  fixed   |             화면에 고정이 된다             |
+
+## flex
+
+### flex란?
+
+#### Flexible Box, Flexbox 라고 부르기도 하며 레이아웃 배치 기능이다.
+
+```html
+<!-- 기본 구조 -->
+<head>
+  <style>
+    .container {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">a</div>
+    <div class="item">b</div>
+    <div class="item">c</div>
+  </div>
+</body>
+```
+
+### flex-direction (container에 적용)
+
+|     속성값     |                설명                |
+| :------------: | :--------------------------------: |
+|      row       |     아이템들이 가로로 배치된다     |
+|  row-reverse   | 아이템들이 역순으로 가로 배치 된다 |
+|     column     |     아이템들이 세로로 배치된다     |
+| column-reverse | 아이템들이 역순으로 세로 배치 된다 |
+
+### 특정 아이템 지정하기
+
+```html
+<head>
+  <!-- 특정 아이템 지정 -->
+  <style>
+    .item:nth-child(1) {
+      color: blue;
+    }
+
+    .container {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">a</div>
+    <div class="item">b</div>
+    <div class="item">c</div>
+  </div>
+</body>
+```
