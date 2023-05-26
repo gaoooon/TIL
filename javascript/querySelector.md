@@ -1,4 +1,4 @@
-## query selector
+## queryQelector
 
 ### html에 있는 element를 가져올때 사용한다
 
