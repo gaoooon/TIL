@@ -22,3 +22,19 @@ const hello = document.querySelector("#hello");
 // hello라는 변수에 hello라는 아이디를 가지고 있는 element를 가져와서 innerText를 변경했다
 hello.innerText = "bye";
 ```
+
+## createElement
+
+### js에서 element를 만들때 사용한다
+
+```js
+// 이미지 태그를 만들고 변수에 저장했다
+const imgTag = document.createElement("img");
+```
+
+### js에서 element를 만들었지만 아직은 html에 적용이 안되어있다 html에 만든 element를 추가해 줘야 한다
+
+```js
+// append함수를 써서 html body에 imgTag를 적용해 줬다 (prepend를 쓰면 body 맨앞에 적용할수 있다 append는 맨뒤)
+document.body.appenChild(imgTag);
+```
