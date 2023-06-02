@@ -1,4 +1,4 @@
-# if, else if, else
+# if, else if, else문
 
 ### 특정 조건이 만족할때 작업을 수행할수 있다
 
