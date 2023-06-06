@@ -75,23 +75,6 @@ console.log(undefined);
 null은 null이라는 값을 할당해야 null이나오고<br/>
 undefined는 아무 값도 할당하지 않았을때 나온다
 
-<hr>
-
-### array
-
-#### array(배열)은 여러개의 데이터를 동시에 가질 수 있다
-
-```js
-const fruit = ["apple", "grape", "banana"];
-/*                0        1         2    */
-
-/* 추가로 값 할당하기(맨뒤에 추가된다)*/
-fruit.push("watermelon");
-
-/* grape를 불르고 싶을때*/
-console.log(fruit[1]);
-```
-
 <hr/>
 
 ### object
