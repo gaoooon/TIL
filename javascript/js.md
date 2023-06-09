@@ -106,3 +106,17 @@ human.height = "168cm";
     /*예시*/
 human.weight = "54kg";
 ```
+
+<hr>
+
+### forEach
+
+``` js
+
+const numbers = [3, 5, 20, 33, 13];
+
+// 배열뒤에 forEach를 쓰면 배열 요소의 개수만큼 반복된다
+numbers.forEach((number, index, array) => { 
+// number는 배열의 값을가져오고 index는 배열 요소의 순서를 가져오고 array는 속해있는 배열을 가져온다
+    console.log(number, index, array);
+});
