@@ -106,3 +106,36 @@ human.height = "168cm";
     /*예시*/
 human.weight = "54kg";
 ```
+
+<hr>
+
+### forEach
+
+``` js
+const numbers = [3, 5, 20, 33, 13];
+
+// 배열뒤에 forEach를 쓰면 배열 요소의 개수만큼 반복된다
+numbers.forEach((number, index, array) => { 
+// number는 배열의 값을가져오고 index는 배열 요소의 순서를 가져오고 array는 속해있는 배열을 가져온다
+    console.log(number, index, array);
+});
+```
+
+### indexOf
+
+#### indexOf는 자신이 찾고싶어하는 값을 찾을때 사용할 수 있다
+
+``` js
+const  numbers = [1, 2, 1, 3, 2, 3, 2, 4];
+
+console.log(numbers.indexOf(2)); // 2를 가장 처음 발견한 인덱스 순서를 출력한다  1을 출력
+console.log(numbers.indexOg(2, 2)); // 2를 찾기는 하지만 인덱스 순서 2부터 찾아 출력한다  4를 출력
+```
+
+###  filter
+
+#### filter는 배열중 자신이 원하는 것만 남기고 싶을때 사용한다
+
+``` js
+const array = [1, 2, 5, 6, 7, 3, 4, 6, 7, 3];
+const result = array.filter((number) => number > 3); // array 배열 안에있는 숫자중 3보다 큰 숫자만 result에 저장된다
