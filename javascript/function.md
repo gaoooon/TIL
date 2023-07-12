@@ -1,4 +1,4 @@
-# function
+# `Function`
 
 ## function 기본 구조
 
@@ -31,4 +31,33 @@ function hello(name) {
 hello("방가온");
 
 // "hello my name is 방가온" 이런식으로 나온다
+```
+
+## 함수 `선언식(declarations)`과 `표현식(expressions)`
+
+- ### 선언식
+
+```js
+// 함수 선언식은 변수를 선언할때는 const나 let으로 하듯이 함수를 선언 할때는 function으로 시작해서 선언한다
+
+function example() {
+  console.log("example");
+  console.log("test");
+}
+```
+
+- ### 표현식
+
+```js
+// 표현식은 함수를 선언하고 선언한 함수를 변수에 할당하는 식으로 된다
+const example = function () {
+  console.log("example");
+  console.log("test");
+};
+
+// arrow function
+const example = () => {
+  console.log("example");
+  console.log("test");
+};
 ```
