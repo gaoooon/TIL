@@ -1,4 +1,4 @@
-## `destructuring`
+## `destructuring`(비구조화 할당)
 
 ### destructuring이란 배열 또는 객체를 파괴하여 개별적인 변수에 할당하는 것이다
 
