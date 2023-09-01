@@ -7,7 +7,7 @@
 
 <hr>
 
-### useState를 사용하는 방법
+### useState를 사용하는 방법(Controlled Input)
 
 ```jsx
 const [inputValue, setInputValue] = useState("");
@@ -25,7 +25,7 @@ return (
 
 <hr>
 
-### useRef를 사용하는 방법
+### useRef를 사용하는 방법 (Uncontrolled Input)
 
 ```jsx
 const inputRef = useRef(null);
