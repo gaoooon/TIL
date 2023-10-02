@@ -20,3 +20,70 @@
 
 - ### useDispatch
   > Slice안에 있는 함수를 실행할 수 있게 한다
+
+<hr>
+
+### index.tsx
+
+```tsx
+import { configureStore } from "@reduxjs/toolkit";
+import counterSlice from "./counterSlice";
+
+const store = configureStore({
+  reducer: {
+    counter: counterSlice.reducer,
+  },
+});
+
+export default store;
+```
+
+### counterSlice.tsx
+
+```tsx
+import { createSlice } from "@reduxjs/toolkit";
+
+const counterSlice = createSlice({
+  name: "counter",
+  initialState: 0,
+  reducers: {
+    increase(state) {
+      return (state += 1);
+    },
+
+    decrease(state) {
+      return (state -= 1);
+    },
+  },
+});
+
+export default counterSlice;
+export const { increase, decrease } = counterSlice.actions;
+```
+
+### 사용할때
+
+```tsx
+import { useDispatch, useSelector } from "react-redux";
+import { increase, decrease } from "./store/counterSlice";
+
+function App() {
+  const counterValue = useSelector((state) => state.counter);
+
+  const increase = () => {
+    dispatch(increase());
+  };
+
+  const decrease = () => {
+    dispatch(decrease());
+  };
+
+  return (
+    <div>
+      <h1>{counterValue}</h1>
+      <button onClick={increase}>+</button>
+      <button onClick={decrease}>-</button>
+    </div>
+  );
+}
+```
