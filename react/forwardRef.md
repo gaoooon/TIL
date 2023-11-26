@@ -28,10 +28,9 @@ export default ParentComponents;
 ```tsx
 // 자식 컴포넌트
 
-const ChildComponents = (ref) => <input ref={ref} />;
+const ChildComponents = forwardRef((ref) => <input ref={ref} />);
 
-export default forwardRef(ChildComponents);
+export default ChildComponents;
 ```
 
 이런식으로 forwardRef를 사용해서 부모 컴포넌트에서 focus 버튼을 눌렀을때 자식 컴포넌트에 있는 input이 focus 되는 기능을 만들었다
-ㄴㄴㄴㄴ
