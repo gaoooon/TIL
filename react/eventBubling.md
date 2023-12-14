@@ -33,8 +33,8 @@
 
 ### 해결 방법
 
-id가 "3"인 div를 클릭했을때 그 div의 onClick 이벤트를 실행시키고 싶다면 id가 "2"인 곳에 버블링을 막는 stopPropagation() 함수를 사용하면 된다 왜냐하면 id가
-"3"인곳을을 클릭하면 차례대로 "2", "1" 대로 전파되는데 "2"에서 전파되는것을 막는다면 "1"까지 전파가 되지 않기 때문이다
+id가 "3"인 div를 클릭했을때 그 div의 onClick 이벤트만 실행시키고 싶다면 id가 "3"인 그 div의 event를 stopPropagation() 함수를 사용해 막으면  된다 왜냐하면 id가
+"3"인곳을을 클릭하면 차례대로 "2", "1" 대로 전파되는데 "3"에서 전파되는것을 막는다면 "2","1"까지 전파가 되지 않기 때문이다
 
 ```jsx
 <div
@@ -46,13 +46,13 @@ id가 "3"인 div를 클릭했을때 그 div의 onClick 이벤트를 실행시키
   <div
     id="2"
     onClick={(e) => {
-      e.stopPropagation();
       console.log(e.target.id, "clicked");
     }}
   >
     <div
       id="3"
       onClick={(e) => {
+        e.stopPropagation();
         console.log(e.target.id, "clicked");
       }}
     ></div>
