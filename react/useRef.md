@@ -1,6 +1,6 @@
 ## `useRef`
 
-### Ref는 reference를 줄인것이다 reference의 뜻은 참조이다 <br> 따라서 useRef의 기능은 특정 DOM을 참조할떄 사용할 수 있다
+### Ref는 reference를 줄인것이다 reference의 뜻은 참조이다 <br> 따라서 useRef의 기능은 특정 DOM을 참조할때 사용할 수 있다
 
 - #### 사용방법
 
