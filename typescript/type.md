@@ -7,10 +7,9 @@ Typescript에서는 Type을 지정할 수 있다
 - 선언
 
 ```ts
-const a: number = 12;
+const [변수이름]: [변수의 타입] = [변수 할당 값];
+// 이런식으로 타입을 지정한다
 ```
-
-:다음에 타입을 지정해 주면 된다
 
 ```ts
 // Number Type
