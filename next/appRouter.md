@@ -8,7 +8,7 @@ Next에서는 app 라우터라는 폴더를 기준으로 path를 나눌수 있�
 
 ### 사용방법
 
-#### 정적 path 만들기
+#### 정적 라우팅하기
 
 ```
 src
@@ -24,7 +24,7 @@ src
 <br>
 `gaon.com/profile`에서 페이지를 보여주고 싶을때는 path 폴더 안에 `page.js(ts, jsx, tsx)` 파일을 만들어 주면 된다
 
-#### 동적 path 만들기
+#### 동적 라우팅하기
 
 ```
 src
@@ -86,9 +86,9 @@ export default function RootLayout({ children }) {
 
 만약 페이지를 그룹화해서 원하는 페이지에만 layout을 배치하고 싶지만 path 때문에 걱정이라면?
 <br>
-그럴때에는 폴더를 `(폴더이름)` 폴더이름을 정해주고 ()로 감싸서 하면 path에는 영향을 미치지 않는 폴더가 생성된다
+그럴때에는 폴더를 `(폴더이름)` 폴더이름을 정해주고 ()로 감싸서 하면 path에는 영향을 미치지 않는 폴더가 생성된다 (group routing)
 <br>
-이제 이 폴더 안에 layout.tsx를 만들어 layout을 원하는 페이지 에만 적용시킬수 있다
+이제 이 폴더 안에 layout.tsx를 만들어 layout을 원하는 페이지에만 적용시킬수 있다
 
 ```
 src
