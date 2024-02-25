@@ -28,6 +28,7 @@ let user: User = {
 ```tsx
 // 함수
 
+// interface로 함수의 구조를 정의
 interface Add {
   (num1: number, num2: number): void;
 }
@@ -39,6 +40,30 @@ const add: Add = (x, y) => {
 
 add(12, 423);
 // 435
+
+// interface로 함수의 인자를 정의
+interface person {
+  name: string;
+  age: number;
+}
+
+const user = (user: person) => {
+  console.log(`hi my name is ${user.name} and my age is ${user.age}`);
+};
+```
+
+```tsx
+// 인덱스
+
+// 인덱싱 방식을 정의
+
+interface arrayStr {
+  [index: number]: string;
+}
+
+const arr: arrayStr = ["s", "df"];
+
+arr[0] = "hihi";
 ```
 
 ```tsx
@@ -72,7 +97,8 @@ interface Car {
   wheels: number;
 }
 
-interface SuperCar extends Car { //extands를 사용해서 Car interface에다가 추가로 속성을 지정해주었다
+interface SuperCar extends Car {
+  //extands를 사용해서 Car interface에다가 추가로 속성을 지정해주었다
   door: number;
   brand: string;
 }
@@ -81,6 +107,6 @@ const kia: SuperCar = {
   color: "white",
   wheels: 4,
   door: 5,
-  brand "Kia"
+  brand: "Kia",
 };
 ```
